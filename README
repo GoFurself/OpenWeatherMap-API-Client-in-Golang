@@ -1,0 +1,21 @@
+Open Weather Map API Client in Golang
+
+A lightweight Go app that utilizes the OpenWM (Open Weather Map) API to fetch and display weather and location information based on latitude and longitude, city name, and ZIP code. It's designed to provide quick and easy access to weather data.
+
+Example:
+- View main.go for example usage.
+- Replace the API key in the `openWM.NewOpenWM("Your_API_Key")` with your actual Open Weather Map API key.
+
+Functions:
+- `GetWeatherByLatLon`: Fetches the current weather for a given latitude and longitude.
+- `GetLocationsByCity`: Retrieves a list of locations that match a given city name.
+- `GetLocationInfoByZip`: Provides location information for a given ZIP code and country code.
+
+Contributions are welcome.
+
+License:
+This software is released under MIT-license.
+
+For the tests:
+go test openwm/* -v -coverprofile=c.out
+go tool cover -html=c.out -o coverage.html
